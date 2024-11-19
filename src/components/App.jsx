@@ -1,12 +1,13 @@
-import Header from "./base/Header.jsx";
-import Main from "./Main.jsx";
+import { useEffect, useReducer } from "react";
+
+import Header from "./layout/Header.jsx";
+import Main from "./layout/Main.jsx";
 import Question from "./Question.jsx";
 import Loader from "./base/Loader.jsx";
 import Error from "./base/Error.jsx";
 import Progress from "./Progress.jsx";
 
-import { useEffect, useReducer } from "react";
-import StartScreen from "./StartScreen.jsx";
+import StartScreen from "./layout/StartScreen.jsx";
 import FinishScreen from "./FinishScreen.jsx";
 
 const SECONDS_PER_QUESTION = 30;

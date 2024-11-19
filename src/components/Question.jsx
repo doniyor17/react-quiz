@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Footer from "./base/Footer.jsx";
+import Footer from "./layout/Footer.jsx";
 import Timer from "./Timer.jsx";
 import Options from "./Options.jsx";
 function Questions({
