@@ -10,6 +10,7 @@ import Progress from "./Progress.jsx";
 import StartScreen from "./layout/StartScreen.jsx";
 import FinishScreen from "./FinishScreen.jsx";
 
+const url = import.meta.env.VITE_API_URL;
 const SECONDS_PER_QUESTION = 30;
 
 const initialState = {
@@ -111,7 +112,7 @@ function App() {
       dispatch({ type: "loading" });
 
       try {
-        const response = await fetch("http://localhost:3001/questions", {
+        const response = await fetch(url, {
           signal: controller.signal,
         });
         const data = await response.json();
