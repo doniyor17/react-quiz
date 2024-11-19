@@ -2,7 +2,7 @@ function Header() {
   return (
     <header className="app-header">
       <img
-        src="vite.svg"
+        src="react.svg"
         alt="React logo"
         width={60}
         height={60}
