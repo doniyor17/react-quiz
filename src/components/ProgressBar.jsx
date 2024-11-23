@@ -1,5 +1,7 @@
-/* eslint-disable react/prop-types */
-function ProgressBar({ current, max }) {
+import { useQuiz } from "../context/QuizContext";
+
+function ProgressBar() {
+  const { index: current, numQuestions: max } = useQuiz();
   return (
     <div className="progress-bar">
       <div

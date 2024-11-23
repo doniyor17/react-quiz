@@ -1,5 +1,7 @@
-/* eslint-disable react/prop-types */
-function StartScreen({ num, dispatch }) {
+import { useQuiz } from "../../context/QuizContext";
+
+function StartScreen() {
+  const { numQuestions: num, dispatch } = useQuiz();
   return (
     <div className="start">
       <h2 className="">Welcome to the React Quiz App!</h2>

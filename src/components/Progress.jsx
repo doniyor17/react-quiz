@@ -1,12 +1,10 @@
-/* eslint-disable react/prop-types */
+import { useQuiz } from "../context/QuizContext";
 import ProgressBar from "./ProgressBar";
-function Progress({ index, numQuestions, points, maxPoints }) {
+function Progress() {
+  const { index, points, numQuestions, maxPoints } = useQuiz();
   return (
     <header className="progress">
-      <ProgressBar
-        current={index}
-        max={numQuestions}
-      />
+      <ProgressBar />
       <p>
         Question: <strong>{index + 1}</strong>/{numQuestions}
       </p>

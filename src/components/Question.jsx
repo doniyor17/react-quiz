@@ -1,23 +1,14 @@
-/* eslint-disable react/prop-types */
 import Footer from "./layout/Footer.jsx";
 import Timer from "./Timer.jsx";
 import Options from "./Options.jsx";
-function Questions({
-  question,
-  answer,
-  dispatch,
-  index,
-  numQuestions,
-  secondsRemaining,
-}) {
+import { useQuiz } from "../context/QuizContext.jsx";
+function Questions() {
+  const { questions, answer, dispatch, index, numQuestions, secondsRemaining } =
+    useQuiz();
   return (
     <div>
-      <h2>{question.question}</h2>
-      <Options
-        question={question}
-        answer={answer}
-        dispatch={dispatch}
-      />
+      <h2>{questions[index].question}</h2>
+      <Options question={questions[index]} />
       <Footer>
         {answer !== null &&
           (index < numQuestions - 1 ? (

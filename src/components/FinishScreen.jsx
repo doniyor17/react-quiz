@@ -1,10 +1,7 @@
-/* eslint-disable react/prop-types */
-export default function FinishScreen({
-  points,
-  maxPoints,
-  highscore,
-  dispatch,
-}) {
+import { useQuiz } from "../context/QuizContext";
+
+export default function FinishScreen() {
+  const { points, maxPoints, highscore, dispatch } = useQuiz();
   const percentage = Math.round((points / maxPoints) * 100);
 
   return (
